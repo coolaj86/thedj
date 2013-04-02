@@ -9,13 +9,15 @@
   server = connect.createServer()
     .use(connect.query())
     .use('/scan', function (request, response) {
+        // right now assuming fb://profile/OBJECT_ID
         var uri = encodeURI(request.query.fb)
+          , id = uri.split('/').pop()
           ;
 
         response.write('<html>'
           + '<head><meta http-equiv="refresh" content="0;URL=fb://' + uri + '"></meta></head>'
-          + '<body>Go to <a href="http://fb.com/CoolAJtheDJ">Facebook</a> and click \'Like\'.'
-          + '<br>' + uri
+          + '<body>Redirecting to <a href="http://fb.com/"' + uri + '>Facebook</a> so you can \'Like\'...'
+          + '<script>setTimeout(function () { location.href="http://fb.com/' + id + '"}, 1300);</script>'
           + '</body>'
           + '</html>');
         response.end();
