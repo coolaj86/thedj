@@ -22,7 +22,7 @@
           + '</html>');
         response.end();
       })
-    .use(function (request, response) {
+    .use('/', function (request, response) {
         response.setHeader('Content-Type', 'text/plain');
         response.write('Want your own YOU@the.dj email and http://YOU.the.dj domain?'
           + '\nCall +1 (317) 426-6525 to speak to AJ ONeal.');
