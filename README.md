@@ -1,6 +1,2 @@
-## the.DJ
-
-This is my the.DJ site.
-
-The only feature it has currently is that it routes to `fb://` URIs
-because [scan.me](http://scan.me) had a bug in their url checker at the time that I made it.
+# Moved
+### [thedj](https://git.daplie.com/coolaj86/thedj) is now at [git.daplie.com/coolaj86/thedj](https://git.daplie.com/coolaj86/thedj)
